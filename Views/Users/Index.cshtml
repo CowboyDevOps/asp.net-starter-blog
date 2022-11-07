@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Users>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Welcome, User</h1>
+
+<table class= "table1" table-bordered style: width:"80%">  
+    <thead>
+        <tr>     
+            <th>    
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                User Name
+            </th>
+        </tr>
+    </thead>
+    <tbody> 
+        @foreach(var obj in Model){
+            <tr>
+                <td width="40%">
+                    @obj.FullName
+                </td>
+                <td width="30%">
+                    @obj.UserEmail
+                </td>
+                    <td width="30%">
+                    @obj.Username
+                    </td>
+            </tr>
+        }
+    </tbody>
+</table>
